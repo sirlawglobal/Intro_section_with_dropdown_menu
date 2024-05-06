@@ -1,0 +1,268 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 500;
+}
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+section.link {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+a {
+    text-decoration: none;
+}
+section.link a {
+    font-size: .8rem;
+    color: hsl(0, 0%, 41%);
+}
+section.link img.menu {
+    display: none;
+    width: 10%;
+    height: 20%;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+nav {
+    justify-content: space-between;
+    width: 80%;
+}
+section.first li {
+    float: left;
+    list-style-type: none;
+}
+section.first > img {
+    display: none;
+}
+section.first li > div a {
+    display: block;
+}
+li.dropdown-container > a {
+    padding-bottom: 20px;
+    display: inline-block;
+}
+li .dropdown {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+}
+li .dropdown a {
+    margin: 13px 0px;
+}
+li .dropdown a img {
+    width: 12px;
+    margin-right: 7px;
+}
+li.dropdown-container:hover > .dropdown {
+    display: block;
+}
+
+section.link a:hover {
+    color: hsl(0, 0%, 8%);
+}
+section.first > img {
+    margin-right: 50px;
+}
+section.first a {
+    margin-right: 30px;
+}
+section.second a {
+    margin-left: 30px;
+}
+section.second a:nth-child(2) {
+    border: 1px solid hsl(0, 0%, 41%);
+    padding: 11px 17px;
+    border-radius: 10px;
+}
+section.work {
+    width: 77%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+section.work section.image img:nth-child(2) {
+    display: none;
+}
+section.work section.image img {
+    width: 100%;
+}
+section.work section.image {
+    width: 40%;
+    object-fit: cover;
+}
+section.work section.text {
+    width: 46%;
+    position: relative;
+}
+section.work section.text h1 {
+    font-size: 4.2rem;
+    margin-top: 90px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+section.work section.text p {
+    font-size: 15px;
+    width: 80%;
+    color: hsl(0, 0%, 41%);
+    margin-bottom: 50px;
+}
+section.work section.text a {
+    color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 8%);
+    padding: 15px 23px;
+    font-size: .9rem;
+    border-radius: 10px;
+}
+section.work section.text a:hover {
+    color: hsl(0, 0%, 8%);
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 8%);
+}
+section.work section.text div {
+    margin-top: 99px; 
+}
+section.work section.text div img:nth-child(2) {
+    position: relative;
+    top: 8px;
+}
+section.work section.text div img {
+    margin: 10px;
+    width: 17%;
+}
+
+@media screen and (max-width: 700px) {
+    section.link img.menu {
+        display: inline-block;
+    }
+    div.overlay {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        bottom: 0px;
+        background-color: hsla(0, 100%, 0%, 80%);
+        display: none;
+    }
+    nav.flex {
+        flex-direction: column;
+        background-color: white;
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        top: 0px;
+        right: 0px;
+        padding-top: 50px;
+        z-index: 2;
+        display: block;
+        transform: translateX(100%);
+        transition: transform 0.3s;
+
+
+    }
+    .flex {
+        align-items: unset;
+    }
+    
+    section.second {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    section.second a {
+        margin-left: unset;
+        margin: auto;
+    }
+    section.second a:nth-child(2) {
+        width: 70%;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    section.first li {
+        float: none;
+        margin-left: 20px;
+    }
+    section.first li:nth-child(4) {
+        margin-top: 20px;
+    }
+    section.first > img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: inline-block;
+        max-width: 10%;
+        margin-top: 20px;
+    }
+    li .dropdown {
+        position: relative;
+    }
+    section.work section.image img:nth-child(1) {
+        display: none;
+    }
+    section.work section.image img:nth-child(2) {
+        display: inline-block;
+        width: 100%;
+    }
+    section.work {
+        flex-direction: column;
+        width: 100%;
+    }
+    section.work section.image {
+        order: 1;
+        width: 100%;
+    }
+    section.work section.text {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        
+    }
+    section.work section.text h1 {
+        width: 95%;
+        margin: auto;
+        font-size: 4rem;
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+    section.work section.text p {
+        width: 85%;
+        margin: auto;
+        padding-bottom: 60px;
+        font-size: 1.7rem;
+        line-height: 40px;
+    }
+    
+    /* section.link img.menu {
+        display: inline-block;
+    } */
+    section.first > img {
+        width: 100%;
+    }
+    section.link {
+        width: 90%;
+    }
+    section.work section.text a {
+        padding: 17px 30px;
+        font-size: 1.2rem;
+    }
+    section.work section.text div {
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 120px;
+    }
+    section.work section.text div img {
+        margin: 25px;
+    }
+}

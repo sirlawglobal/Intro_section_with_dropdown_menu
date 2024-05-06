@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <section class="link">
+      <img src="images/logo.svg" alt="logo">
+    <nav class="flex">
+        <section class="first flex">
+          <img src="images/icon-close-menu.svg" alt="icon-close-menu" id="close">
+          <ul>
+            <li class="dropdown-container"><a href="#" class="flex">Features <img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
+            <div class="dropdown">
+              <a href="#"><img src="images/icon-todo.svg" alt="icon-todo">Todo List</a>
+              <a href="#"><img src="images/icon-calendar.svg" alt="icon-calendar">Calender</a>
+              <a href="#"><img src="images/icon-reminders.svg" alt="icon-reminders">Reminders</a>
+              <a href="#"><img src="images/icon-planning.svg" alt="icon-planning">Planning</a>
+            </div></li>
+            <li class="dropdown-container"><a href="#">Company <img src="images/icon-arrow-down.svg" alt="icon-arrow-down"></a>
+              <div class="dropdown">
+                <a href="#">History</a>
+                <a href="#">Our Team</a>
+                <a href="#">Blog</a>
+              </div>
+            </li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">About</a></li>
+          </ul>
+        
+        </section>
+        <section class="second">
+          <a href="#">Login</a>
+          <a href="#">Register</a>
+        </section>
+      </nav>
+        <img src="images/icon-menu.svg" alt="menu" class="menu">
+    </section> 
+    
+  
+  <section class="work">
+    <section class="text">
+      <h1>Make remote work</h1>
+      <p>Get your team in sync, no matter your location. Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+      <a href="#">Learn more</a>
+      <div>
+        <img src="images/client-databiz.svg" alt="client-databiz">
+        <img src="images/client-audiophile.svg" alt="client-audiophile">
+        <img src="images/client-meet.svg" alt="client-meet">
+        <img src="images/client-maker.svg" alt="client-maker">
+      </div>
+    </section>
+    <section class="image">
+      <img src="images/image-hero-desktop.png" alt="image-hero-desktop">
+      <img src="images/image-hero-mobile.png" alt="image-hero-mobile">
+    </section>
+  </section>
+  <script>
+    const closeIcon = document.getElementById("close");
+    const nav = document.querySelector("nav");
+    const overlay = document.querySelector(".overlay");
+    const menuIcon = document.querySelector("img.menu");
+
+    closeIcon.onclick = function() {
+      nav.style.transform = "translateX(100%)";
+      overlay.style.display = "none";
+    }
+
+    menuIcon.onclick = function() {
+      nav.style.transform = "translateX(0%)";
+      overlay.style.display = "block";
+    }
+
+  </script>
+</body>
+</html>
